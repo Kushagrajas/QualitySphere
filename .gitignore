@@ -1,0 +1,26 @@
+# Maven build files
+target/
+
+# IntelliJ files
+.idea/
+*.iml
+
+# Compiled Java files
+*.class
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Allure commandline installation
+.allure/
+
+# Allure generated reports and results
+allure-results/
+allure-report/
