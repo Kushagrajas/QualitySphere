@@ -5,6 +5,7 @@ pipeline {
     tools {
         jdk 'JDK21'
         maven 'Maven3'
+        allure 'Allure'
     }
 
     stages {
@@ -19,6 +20,16 @@ pipeline {
             steps {
                 echo 'Running Selenium tests'
                 bat 'mvn -B clean test'
+            }
+        }
+
+        stage('Allure Report') {
+            steps {
+                allure([
+                    includeProperties: false,
+                    jdk: '',
+                    results: [[path: 'target/allure-results']]
+                ])
             }
         }
     }
